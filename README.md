@@ -9,10 +9,12 @@ In my attempt, I had some errors and I have shortend the code so it can work for
 I am a beginner coder so don't judge :)
 
 This works when you give color names for the icons. I tried to make it work with hex as well but
-I get ``W18: Invalid character in group name`` and I don't know how to make if/else to match
+I get ``W18: Invalid character in group name`` and I don't know how to make *if/else* to match
 regular words or hex.
 
 You can try this by copying the file to your .vim directory and source it in .vimrc under the
 NERDTree configuration, that is how I have it.
+
+Vim **termguicolors must be enabled**
 
 I hope this issue gets fixed soon.
