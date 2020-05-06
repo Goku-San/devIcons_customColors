@@ -6,7 +6,7 @@ function! DeviconsColors(config)
 
     for color in colors
       exec 'autocmd FileType nerdtree'
-        \ 'highlight devicons_'.color.' guifg='.color.''
+        \ 'highlight devicons_'.color.' guifg=#'.color.''
 
       exec 'autocmd FileType nerdtree syntax match devicons_'.color.' /\v'.join(a:config[color], '|').'/ containedin=ALL'
     endfor
@@ -14,31 +14,34 @@ function! DeviconsColors(config)
 endfunction
 
 let g:devicons_colors = {
-  \'royalblue1': ['', '', '', ''],
-  \'darkorange': ['', '', '', '', '', '', '', '', '', '', ''],
-  \'yellow': ['', '', ''],
-  \'orange': ['', '', '', 'λ', '', ''],
-  \'red': ['', '', '', '', '', '', '', '', ''],
-  \'magenta1': [''],
-  \'violet': ['', '', '', ''],
-  \'blue1': ['', '', '', '', '', '', '', '', '', '', '', '', ''],
-  \'cyan2': ['', '', '', ''],
-  \'lime': ['', '', '', '', '']
+  \ '5f5fff': ['', '', ''],
+  \ 'fffafa': [''],
+  \ 'a37351': [''],
+  \ 'ff8700': ['', '', '', '', '', '', '', '', '', ''],
+  \ 'ffff00': ['', '', ''],
+  \ 'ffa500': ['', '', '', 'λ', '', ''],
+  \ 'ff0000': ['', '', '', '', '', '', '', '', ''],
+  \ 'ff00ff': [''],
+  \ 'ee82ee': ['', '', '', ''],
+  \ '0000ff': ['', '', '', '', '', '', '', '', '', '', '', '', ''],
+  \ '00ffd7': ['', '', '', ''],
+  \ '00ff00': ['', '', '', '', '']
 \}
 
 call DeviconsColors(g:devicons_colors)
 
 " Color names   hex   from https://jonasjacek.github.io/colors/
-" royalblue1  #5f5fff
-" darkorange  #ff8700
-" yellow      #ffff00
-" orange      #ffaf00
-" red         #ff0000
-" magenta1    #ff00ff
-" violet      #af00d7
-" blue1       #0000ff
-" cyan2       #00ffd7
-" lime        #00ff00
+" royalblue1   #5f5fff
+" snow         #fffafa
+" coffee       #a37351
+" yellow       #ffff00
+" orange       #ffa500
+" red          #ff0000
+" magenta1     #ff00ff
+" violet       #ee82ee
+" blue1        #0000ff
+" cyan2        #00ffd7
+" lime         #00ff00
 
 " Extensions & Icons
 " from https://github.com/ryanoasis/vim-devicons/blob/master/plugin/webdevicons.vim L160-272
